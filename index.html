@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="hr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Inservio</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+  <nav class="nav">
+    <a href="#" class="logo">
+        <img src="Inservio-logo-cropped.svg" alt="Inservio logo">
+    </a>
+
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#naslovna">Naslovna</a></li>
+      <li><a href="#usluge">Usluge</a></li>
+      <li><a href="#dodatno">Dodatne djelatnosti</a></li>
+      <li><a href="#o-nama">O nama</a></li>
+      <li><a href="#kontakt">Kontakt</a></li>
+    </ul>
+
+    <button class="burger" id="burger">☰</button>
+  </nav>
+
+
+  <section class="hero" id="naslovna">
+
+    <span class="tag">Računovodstvo & knjigovodstvo</span>
+
+    <h1>
+      Vaše poslovanje u <span>sigurnim rukama</span>
+    </h1>
+
+    <p>
+      Profesionalne računovodstvene i knjigovodstvene usluge za obrte,
+      tvrtke i slobodna zanimanja.
+    </p>
+
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn btn-primary">Kontakt</a>
+    </div>
+
+  </section>
+
+
+  <section class="section" id="usluge">
+
+    <div class="section-header">
+      <span class="section-label">Što nudimo</span>
+      <h2>Naše usluge</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Računovodstvo</h3>
+        <p>Analiza, izvještavanje i savjetovanje za donošenje kvalitetnih poslovnih odluka.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Knjigovodstvo</h3>
+        <p>Uredno i ažurno vođenje poslovnih knjiga i svih financijskih evidencija.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Porezno savjetovanje</h3>
+        <p>Optimizacija poreznih obveza uz poštivanje svih zakonskih propisa.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Obračun plaća</h3>
+        <p>Izrada platnih lista, doprinosa te prijava i odjava zaposlenika.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section alt" id="dodatno">
+
+    <div class="section-header">
+      <span class="section-label">Ostale usluge</span>
+      <h2>Dodatne djelatnosti</h2>
+    </div>
+
+    <div class="cards">
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Turizam & nautika</h3>
+        <p>Turističke i nautičke usluge, iznajmljivanje opreme i rekreacijske aktivnosti.</p>
+      </div>
+
+      <div class="card">
+        <div class="icon"></div>
+        <h3>Rent-a-car</h3>
+        <p>Iznajmljivanje vozila i opreme za privatne i poslovne potrebe.</p>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section alt" id="o-nama">
+
+    <div class="about">
+
+      <div>
+        <span class="section-label">O nama</span>
+        <h2>Stručnost i povjerenje</h2>
+
+        <p>
+          Inservio d.o.o. pruža profesionalne računovodstvene usluge i poslovno savjetovanje s naglaskom na točnost, zakonitost i dugoročnu suradnju.
+        </p>
+
+        <ul>
+          <li>Hrvatske mornarice 1K, SPLIT</li>
+          <li>Kontakt: +385 21 503216</li>
+          <li>Email: sanja1@inservio.hr</li>
+        </ul>
+      </div>
+
+      <div class="stats">
+        <div>
+          <h3>200+</h3>
+          <p>Klijenata</p>
+        </div>
+
+        <div>
+          <h3>10+</h3>
+          <p>Godina iskustva</p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+
+  <section class="section" id="kontakt">
+
+    <div class="section-header">
+      <span class="section-label">Kontakt</span>
+      <h2>Javite nam se</h2>
+    </div>
+
+    <form class="contact-form" id="contactForm">
+
+      <input type="text" placeholder="Ime i prezime" required>
+      <input type="email" placeholder="E-mail adresa" required>
+      <textarea placeholder="Vaša poruka..." required></textarea>
+
+      <button type="submit" class="btn btn-primary">
+        Pošalji upit
+      </button>
+
+    </form>
+
+    <p class="success" id="successMsg">
+      ✓ Poruka je uspješno poslana.
+    </p>
+
+  </section>
+
+
+  <footer>
+    © 2026 Inservio d.o.o.
+  </footer>
+
+  <script src="js.js"></script>
+
+</body>
+</html>
