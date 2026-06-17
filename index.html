@@ -3,237 +3,616 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
   <title>Inservio d.o.o. – Računovodstvo & Knjigovodstvo Split</title>
-
-  <!-- SEO -->
-  <meta name="description" content="Inservio d.o.o. – profesionalne računovodstvene i knjigovodstvene usluge za obrte, tvrtke i slobodna zanimanja u Splitu. Porezno savjetovanje i obračun plaća.">
-  <meta name="keywords" content="računovodstvo Split, knjigovodstvo Split, porezno savjetovanje, obračun plaća, Inservio">
-  <meta property="og:title" content="Inservio d.o.o. – Računovodstvo & Knjigovodstvo">
-  <meta property="og:description" content="Profesionalne računovodstvene usluge u Splitu. Više od 200 klijenata i 10+ godina iskustva.">
+  <meta name="description" content="Inservio d.o.o. – profesionalne računovodstvene i poslovne usluge za obrte, tvrtke i slobodna zanimanja u Splitu. Porezno savjetovanje, obračun plaća i osnivanje društava.">
+  <meta name="keywords" content="računovodstvo Split, knjigovodstvo Split, porezno savjetovanje, obračun plaća, osnivanje tvrtke Split, Inservio">
+  <meta property="og:title" content="Inservio d.o.o. – Računovodstvo & Knjigovodstvo Split">
+  <meta property="og:description" content="Profesionalne računovodstvene usluge u Splitu za domaće i inozemne klijente. Više od 200 klijenata, 10+ godina iskustva.">
   <meta property="og:type" content="website">
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=DM+Sans:wght@300;400;500;700&display=swap" rel="stylesheet">
-
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-
   <nav class="nav">
     <a href="#" class="logo">
-        <img src="Inservio-logo-cropped.svg" alt="Inservio logo">
+      <img src="Inservio-logo-cropped.svg" alt="Inservio logo">
     </a>
-
     <ul class="nav-links" id="navLinks">
       <li><a href="#naslovna">Naslovna</a></li>
-      <li><a href="#usluge">Usluge</a></li>
+      <li class="nav-dropdown">
+        <a href="#usluge" class="nav-dropdown-toggle">Usluge <span class="nav-arrow">&#8964;</span></a>
+        <ul class="nav-dropdown-menu">
+          <li><a href="#usluge" data-open-modal="racunovodstvo">Računovodstvo</a></li>
+          <li><a href="#usluge" data-open-modal="glavna-knjiga">Glavna knjiga</a></li>
+          <li><a href="#usluge" data-open-modal="knjigovodstvo">Knjigovodstvo</a></li>
+          <li><a href="#usluge" data-open-modal="porezno-savjetovanje">Porezno savjetovanje</a></li>
+          <li><a href="#usluge" data-open-modal="obracun-placa">Obračun plaća</a></li>
+          <li><a href="#usluge" data-open-modal="porezna-izvjesca">Porezna izvješća</a></li>
+          <li><a href="#usluge" data-open-modal="zavrsni-racun">Završni račun i podrška</a></li>
+          <li><a href="#usluge" data-open-modal="otvaranje-drustva">Otvaranje trgovačkog društva</a></li>
+        </ul>
+      </li>
       <li><a href="#dodatno">Dodatne djelatnosti</a></li>
       <li><a href="#o-nama">O nama</a></li>
       <li><a href="#kontakt">Kontakt</a></li>
     </ul>
-
-    <button class="burger" id="burger">☰</button>
+    <button class="burger" id="burger">&#9776;</button>
   </nav>
 
 
-  <section class="hero" id="naslovna">
-
-    <span class="tag">Računovodstvo & knjigovodstvo</span>
-
-    <h1>
-      Vaše poslovanje u <span>sigurnim rukama</span>
-    </h1>
-
-    <p>
-      Profesionalne računovodstvene i knjigovodstvene usluge za obrte,
-      tvrtke i slobodna zanimanja. Računovodstveno poslovno savjetovanje.
-    </p>
-
-    <div class="hero-buttons">
-      <a href="#kontakt" class="btn btn-primary">Kontakt</a>
+  <div class="topbar">
+    <div class="topbar-inner">
+      <span>Pon – Pet &nbsp;|&nbsp; 08:00 – 16:00</span>
+      <span class="topbar-sep">·</span>
+      <a href="tel:+38521484662">+385 21 484 662</a>
+      <span class="topbar-sep">·</span>
     </div>
+  </div>
 
+  <section class="hero" id="naslovna">
+    <span class="tag">Računovodstvo & knjigovodstvo</span>
+    <h1>Vaše poslovanje u <span>sigurnim rukama</span></h1>
+    <p>Profesionalne računovodstvene i poslovne usluge za obrte, tvrtke i slobodna zanimanja u Splitu.</p>
+    <div class="hero-buttons">
+      <a href="#kontakt" class="btn btn-primary">Kontaktirajte nas</a>
+    </div>
   </section>
 
-
   <section class="section" id="usluge">
-
     <div class="section-header">
       <span class="section-label">Što nudimo</span>
       <h2>Naše usluge</h2>
     </div>
+    <div class="cards cards-4">
 
-    <div class="cards">
-
-      <div class="card">
+      <div class="card" data-modal="racunovodstvo">
         <div class="icon"></div>
         <h3>Računovodstvo</h3>
-        <p>Financijska analiza, izvještavanje i savjetovanje za kvalitetno donošenje poslovnih odluka.</p>
+        <p>Kontinuirano praćenje financijskog poslovanja, izrada izvještaja i savjetovanje za donošenje informiranih poslovnih odluka.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
+      <div class="card" data-modal="glavna-knjiga">
         <div class="icon"></div>
         <h3>Glavna knjiga</h3>
-        <p>Vođenje dnevnika i glavne knjige te usklađivanje poslovnih evidencija.</p>
+        <p>Uredno vođenje poslovnog dnevnika i glavne knjige sukladno zakonskim propisima uz redovito usklađivanje evidencija.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
+      <div class="card" data-modal="knjigovodstvo">
         <div class="icon"></div>
         <h3>Knjigovodstvo</h3>
-        <p>Knjiženje ulaznih i izlaznih računa, izvoda i ostale financijske dokumentacije.</p>
+        <p>Knjiženje ulaznih i izlaznih računa, bankovnih izvoda i cjelokupne poslovne dokumentacije — pravovremeno i bez pogrešaka.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
+      <div class="card" data-modal="porezno-savjetovanje">
         <div class="icon"></div>
         <h3>Porezno savjetovanje</h3>
-        <p>Stručno porezno savjetovanje i optimizacija poreznih obveza u skladu sa zakonskim propisima.</p>
+        <p>Stručno savjetovanje i zakonita optimizacija poreznih obveza uz kontinuirano praćenje izmjena poreznih propisa.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
+      <div class="card" data-modal="obracun-placa">
         <div class="icon"></div>
         <h3>Obračun plaća</h3>
-        <p>Obračun plaća, doprinosa, prijave i odjave radnika te vođenje kadrovske administracije.</p>
+        <p>Izrada platnih lista, obračun doprinosa, prijave i odjave radnika te vođenje cjelokupne kadrovske administracije.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
-        <div class="icon"></div>
-        <h3>Dugotrajna imovina</h3>
-        <p>Evidencija dugotrajne imovine i obračun amortizacije.</p>
-      </div>
-
-      <div class="card">
+      <div class="card" data-modal="porezna-izvjesca">
         <div class="icon"></div>
         <h3>Porezna izvješća</h3>
-        <p>Izrada i predaja poreznih prijava te ostalih zakonskih izvještaja.</p>
+        <p>Izrada i predaja svih zakonski propisanih poreznih prijava i izvještaja prema Poreznoj upravi i nadležnim tijelima.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
-      <div class="card">
+      <div class="card" data-modal="zavrsni-racun">
         <div class="icon"></div>
         <h3>Završni račun i podrška</h3>
-        <p>Izrada završnog računa, godišnje izvještavanje te podrška tijekom poreznih i revizorskih nadzora.</p>
+        <p>Izrada godišnjeg financijskog izvještaja, predaja nadležnim tijelima i stručna podrška pri poreznim nadzorima i revizijama.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
+      </div>
+
+      <div class="card" data-modal="otvaranje-drustva">
+        <div class="icon"></div>
+        <h3>Otvaranje trgovačkog društva</h3>
+        <p>Potpuna usluga osnivanja — od odabira naziva i djelatnosti do upisa u registar, otvaranja računa i prijave na Poreznu upravu.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
 
     </div>
   </section>
 
-
   <section class="section alt" id="dodatno">
-
     <div class="section-header">
       <span class="section-label">Ostale usluge</span>
       <h2>Dodatne djelatnosti</h2>
     </div>
-
     <div class="cards">
-
-      <div class="card">
+      <div class="card" data-modal="turizam">
         <div class="icon"></div>
         <h3>Turizam & nautika</h3>
-        <p>Turističke i nautičke usluge, iznajmljivanje opreme i rekreacijske aktivnosti.</p>
+        <p>Turističke i nautičke usluge, iznajmljivanje opreme te organizacija rekreacijskih aktivnosti na jadranskoj obali.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
-
-      <div class="card">
+      <div class="card" data-modal="rent-a-car">
         <div class="icon"></div>
         <h3>Rent-a-car</h3>
-        <p>Iznajmljivanje vozila i opreme za privatne i poslovne potrebe.</p>
+        <p>Kratkoročni i dugoročni najam osobnih vozila za privatne i poslovne korisnike uz fleksibilne uvjete.</p>
+        <button class="card-btn">Saznaj više <span class="card-btn-arrow">&#8594;</span></button>
       </div>
-
     </div>
   </section>
 
+  <section class="section about-section" id="o-nama">
 
-  <section class="section alt" id="o-nama">
+    <div class="about-header">
+      <span class="section-label">O nama</span>
+      <h2>Stručnost, povjerenje<br>i međunarodna perspektiva</h2>
+      <p class="about-lead">Inservio d.o.o. pruža profesionalne računovodstvene i poslovne usluge s naglaskom na točnost, zakonitost i dugoročnu suradnju — za domaće klijente i inozemne ulagače koji posluju u Hrvatskoj.</p>
+    </div>
 
-    <div class="about">
+    <div class="about-stats">
+      <div class="about-stat">
+        <h3 class="counter" data-target="200">0</h3>
+        <p>Zadovoljnih klijenata</p>
+      </div>
+      <div class="about-stat">
+        <h3>10+</h3>
+        <p>Godina iskustva</p>
+      </div>
+      <div class="about-stat">
+        <h3>3</h3>
+        <p>Jezika poslovanja</p>
+      </div>
+      <div class="about-stat">
+        <h3>100%</h3>
+        <p>Posvećenost klijentu</p>
+      </div>
+    </div>
 
-      <div>
-        <span class="section-label">O nama</span>
-        <h2>Stručnost i povjerenje</h2>
+    <div class="about-blocks">
 
-        <p>
-          Inservio d.o.o. pruža profesionalne računovodstvene usluge i poslovno savjetovanje s naglaskom na točnost, zakonitost i dugoročnu suradnju.
-        </p>
+      <div class="about-block">
+        <div class="about-block-accent"></div>
+        <h3>O nama</h3>
+        <p>Inservio d.o.o. pruža sveobuhvatne računovodstvene i poslovne usluge za obrte, trgovačka društva i slobodna zanimanja. Naš rad temelji se na stručnosti, točnosti i pouzdanosti — vrijednostima koje naši klijenti prepoznaju kroz dugoročnu suradnju.</p>
+      </div>
 
-        <ul>
-          <li>Adresa: Hrvatske mornarice 1K, 21000 Split, Hrvatska</li>
-          <li>Telefon: <a href="tel:+38521503216">+385 21 503 216</a></li>
-          <li>Email: <a href="mailto:info@inservio.hr">info@inservio.hr</a></li>
-          <li>Radno vrijeme: Pon–Pet, 08:00–16:00</li>
+      <div class="about-block">
+        <div class="about-block-accent"></div>
+        <h3>Iskustvo s inozemnim klijentima</h3>
+        <p>Posjedujemo višegodišnje iskustvo u pružanju usluga stranim tvrtkama i ulagačima koji ulaze na hrvatsko tržište. Poznajemo specifičnosti međunarodnog poslovanja i pružamo potpunu podršku pri osnivanju, poreznom usklađivanju i svakodnevnom poslovanju u RH.</p>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-accent"></div>
+        <h3>Jezici poslovanja</h3>
+        <p>Cjelokupnu uslugu pružamo na hrvatskom, engleskom i španjolskom jeziku. Stranim klijentima osiguravamo jasnu i preciznu komunikaciju u svakom koraku — od prvog savjetovanja do predaje godišnjih izvještaja.</p>
+        <div class="lang-tags">
+          <span class="lang-tag">HR Hrvatski</span>
+          <span class="lang-tag">EN English</span>
+          <span class="lang-tag">ES Español</span>
+        </div>
+      </div>
+
+      <div class="about-block">
+        <div class="about-block-accent"></div>
+        <h3>Kontakt informacije</h3>
+        <ul class="about-contact-list">
+          <li><span class="about-contact-label">Adresa</span><span>Ul. Hrvatske mornarice 1K, 21000 Split</span></li>
+          <li><span class="about-contact-label">Telefon</span><a href="tel:+38521484662">+385 21 484 662</a></li>
+          <li><span class="about-contact-label">Email</span><a href="mailto:Sanja1@inservio.hr">Sanja1@inservio.hr</a></li>
+          <li><a href="mailto:Mirela1@inservio.hr">Mirela1@inservio.hr</a></li>
+          <li><span class="about-contact-label">Radno vrijeme</span><span>Pon–Pet: 08:00–16:00</span></li>
         </ul>
       </div>
 
-      <div class="stats">
-        <div>
-          <h3 class="counter" data-target="200">0</h3>
-          <p>Klijenata</p>
-        </div>
-
-        <div>
-          <h3>10+</h3>
-          <p>Godina iskustva</p>
-        </div>
-      </div>
-
     </div>
   </section>
 
-
   <section class="section" id="kontakt">
-
     <div class="section-header">
       <span class="section-label">Kontakt</span>
       <h2>Javite nam se</h2>
     </div>
-
     <form class="contact-form" id="contactForm">
-
       <input type="text" placeholder="Ime i prezime" required>
       <input type="email" placeholder="E-mail adresa" required>
       <textarea placeholder="Vaša poruka..." required></textarea>
-
-      <button type="submit" class="btn btn-primary">
-        Pošalji upit
-      </button>
-
+      <button type="submit" class="btn btn-primary">Pošalji upit</button>
     </form>
-
-    <p class="success" id="successMsg">
-      ✓ Poruka je uspješno poslana.
-    </p>
-
+    <p class="success" id="successMsg">Poruka je uspješno poslana. Javit ćemo vam se u najkraćem mogućem roku.</p>
     <div class="contact-info">
-      <a href="tel:+38521503216">+385 21 503216</a>
+      <a href="tel:+38591 444 0591">+385 91 444 0591</a>
       <span class="contact-divider">·</span>
-      <a href="mailto:info@inservio.hr">info@inservio.hr</a>
+      <a href="mailto:Sanja1@inservio.hr">Sanja1@inservio.hr</a>
     </div>
-
     <div class="map-wrap">
       <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2887.3!2d16.4397!3d43.5081!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e0a6a1df3b1%3A0x1!2sHrvatske%20mornarice%201k%2C%20Split!5e0!3m2!1shr!2shr!4v1"
-        width="100%"
-        height="350"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2893.252081478683!2d16.440396412090358!3d43.51793577098838!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x13355e09a2be9ac9%3A0x47b9fba0d3d07eeb!2sUl.%20Hrvatske%20Mornarice%201k%2C%2021000%2C%20Split!5e0!3m2!1sen!2shr!4v1781691180636!5m2!1sen!2shr"
+        width="100%" height="350"
         style="border:0; border-radius:12px;"
-        allowfullscreen=""
-        loading="lazy"
+        allowfullscreen="" loading="lazy"
         referrerpolicy="no-referrer-when-downgrade"
         title="Lokacija Inservio d.o.o.">
       </iframe>
     </div>
-
   </section>
 
-
-  <footer>
-    © 2026 Inservio d.o.o.
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="footer-col footer-col-brand">
+        <a href="#" class="footer-logo">
+          <img src="Inservio-logo-cropped.svg" alt="Inservio logo">
+        </a>
+        <p class="footer-tagline">Profesionalne računovodstvene i poslovne usluge za domaće i inozemne klijente u Splitu.</p>
+      </div>
+      <div class="footer-col">
+        <h4>Usluge</h4>
+        <ul>
+          <li><a href="#usluge">Računovodstvo</a></li>
+          <li><a href="#usluge">Knjigovodstvo</a></li>
+          <li><a href="#usluge">Porezno savjetovanje</a></li>
+          <li><a href="#usluge">Obračun plaća</a></li>
+          <li><a href="#usluge">Porezna izvješća</a></li>
+          <li><a href="#usluge">Završni račun</a></li>
+          <li><a href="#usluge">Otvaranje društva</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Tvrtka</h4>
+        <ul>
+          <li><a href="#o-nama">O nama</a></li>
+          <li><a href="#dodatno">Dodatne djelatnosti</a></li>
+          <li><a href="#kontakt">Kontakt</a></li>
+          <li><a href="#" data-legal="impressum">Impressum</a></li>
+          <li><a href="#" data-legal="privatnost">Politika privatnosti</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Kontakt</h4>
+        <ul class="footer-contact">
+          <li>
+            <span class="footer-contact-label">Adresa</span>
+            <span>Ul. Hrvatske mornarice 1K<br>21000 Split, Hrvatska</span>
+          </li>
+          <li>
+            <span class="footer-contact-label">Telefon</span>
+            <a href="tel:+38521484662">+385 21 484 662</a>
+          </li>
+          <li>
+            <span class="footer-contact-label">Radno vrijeme</span>
+            <span>Pon – Pet, 08:00 – 16:00</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>&#169; 2026 Inservio d.o.o. Sva prava zadržana.</span>
+      <div class="footer-bottom-links">
+        <a href="#" data-legal="impressum">Impressum</a>
+        <a href="#" data-legal="privatnost">Politika privatnosti</a>
+      </div>
+    </div>
   </footer>
 
-  <button class="scroll-top" id="scrollTop" aria-label="Natrag na vrh">↑</button>
+  <button class="scroll-top" id="scrollTop" aria-label="Natrag na vrh">&#8593;</button>
+
+  <div class="modal" id="modal-racunovodstvo" role="dialog" aria-modal="true" aria-labelledby="modal-racunovodstvo-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-racunovodstvo-title">Računovodstvo</h2>
+      <p class="modal-lead">Sveobuhvatno praćenje financijskog poslovanja, izrada izvještaja i stručno savjetovanje koje vam daje jasan uvid u stanje i smjer vašeg poslovanja.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Pružamo kompletne računovodstvene usluge koje obuhvaćaju kontinuirano evidentiranje poslovnih promjena, izradu periodičnih i godišnjih financijskih izvještaja te analizu prihoda, rashoda i novčanih tokova. Savjetujemo klijente pri donošenju poslovnih odluka temeljenih na točnim i pravovremenim financijskim podacima.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Uredno vođeno računovodstvo preduvjet je za transparentno poslovanje, zakonsku usklađenost i pouzdano planiranje. Bez točnih financijskih podataka nije moguće donositi informirane odluke niti osigurati stabilnost poslovanja na dugi rok.</p>
+      <ul class="modal-list">
+        <li>Kontinuirano praćenje financijskog poslovanja</li>
+        <li>Izrada periodičnih i godišnjih financijskih izvještaja</li>
+        <li>Analiza prihoda, rashoda i novčanih tokova</li>
+        <li>Bilanca i račun dobiti i gubitka</li>
+        <li>Financijsko savjetovanje prilagođeno poslovnim ciljevima</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-glavna-knjiga" role="dialog" aria-modal="true" aria-labelledby="modal-glavna-knjiga-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-glavna-knjiga-title">Glavna knjiga</h2>
+      <p class="modal-lead">Uredno vođen poslovni dnevnik i glavna knjiga osnova su svakog urednog financijskog poslovanja i preduvjet za točne izvještaje.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Vodimo poslovni dnevnik i glavnu knjigu u skladu s važećim zakonskim propisima. Svaka poslovna promjena uredno se bilježi i usklađuje, a redovitim kontrolama knjiženja osiguravamo konzistentnost i točnost cjelokupne evidencije.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Glavna knjiga temelj je svih financijskih izvještaja. Njezina urednost izravno utječe na točnost PDV prijava, godišnjeg izvještaja i svih ostalih zakonskih obveza. Neuređena evidencija najčešći je uzrok problema pri poreznim nadzorima.</p>
+      <ul class="modal-list">
+        <li>Vođenje poslovnog dnevnika i glavne knjige</li>
+        <li>Redovito usklađivanje poslovnih evidencija</li>
+        <li>Kontrola i provjera knjiženja</li>
+        <li>Priprema podloga za financijske izvještaje</li>
+        <li>Usklađenost sa zakonskim propisima</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-knjigovodstvo" role="dialog" aria-modal="true" aria-labelledby="modal-knjigovodstvo-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-knjigovodstvo-title">Knjigovodstvo</h2>
+      <p class="modal-lead">Pravovremena i točna obrada cjelokupne poslovne dokumentacije — računi, izvodi, blagajna i sve ostalo uvijek na svom mjestu.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Preuzimamo knjiženje ulaznih i izlaznih računa, bankovnih izvoda, blagajničkih dokumenata i sve ostale poslovne dokumentacije. Svaki dokument obrađuje se prema zakonskim pravilima, a evidencija se redovito usklađuje kako bi uvijek bila aktualna i pouzdana.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Uredna dokumentacija preduvjet je za uspješno prolaženje poreznih nadzora i revizija. Pravovremeno knjiženje osigurava da financijski izvještaji uvijek odražavaju stvarno stanje, što je nužno za svakodnevno upravljanje poslovanjem.</p>
+      <ul class="modal-list">
+        <li>Knjiženje ulaznih i izlaznih računa</li>
+        <li>Obrada bankovnih izvoda</li>
+        <li>Vođenje blagajne i putnih naloga</li>
+        <li>Evidencija kupaca i dobavljača</li>
+        <li>Usklađivanje salda i IOS obrazaca</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-porezno-savjetovanje" role="dialog" aria-modal="true" aria-labelledby="modal-porezno-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-porezno-title">Porezno savjetovanje</h2>
+      <p class="modal-lead">Stručno savjetovanje i zakonita optimizacija poreznih obveza uz praćenje zakonodavnih izmjena koje utječu na vaše poslovanje.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Analiziramo poslovnu situaciju klijenta i identificiramo zakonite mogućnosti za smanjenje poreznog opterećenja. Savjetujemo o optimalnim poslovnim strukturama, pratimo izmjene poreznih zakona i pravovremeno obavještavamo klijente o svim relevantnim promjenama koje mogu utjecati na njihovo poslovanje.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Porezno zakonodavstvo u Hrvatskoj podliježe čestim izmjenama. Nepoznavanje aktualnih propisa može rezultirati preplaćenim porezima ili, u suprotnom, poreznim prekršajima. Stručno savjetovanje osigurava da vaše poslovanje uvijek bude u skladu sa zakonom uz minimalno porezno opterećenje.</p>
+      <ul class="modal-list">
+        <li>Optimizacija poreznih obveza u okviru zakonskih mogućnosti</li>
+        <li>Savjetovanje o PDV-u i porezu na dobit</li>
+        <li>Planiranje poreznih učinaka poslovnih odluka</li>
+        <li>Zastupanje i komunikacija s Poreznom upravom</li>
+        <li>Kontinuirano praćenje zakonodavnih izmjena</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-obracun-placa" role="dialog" aria-modal="true" aria-labelledby="modal-place-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-place-title">Obračun plaća</h2>
+      <p class="modal-lead">Točan i pravovremeni obračun plaća, doprinosa i cjelokupna kadrovska administracija za vaše zaposlenike.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Preuzimamo izradu platnih lista i isplatnih naloga, obračun doprinosa iz i na plaću, prijave i odjave radnika na HZMO i HZZO te vođenje kadrovske evidencije. Svaki obračun usklađen je s važećim propisima radnog i poreznog zakonodavstva.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Obračun plaća zahtijeva poznavanje radnog prava, poreznih propisa i specifičnih zakonskih obveza poslodavca. Pogreška u obračunu može rezultirati financijskim i pravnim posljedicama. Povjeravanjem ove usluge stručnom timu osiguravate zakonsku ispravnost i rasterećujete interno poslovanje.</p>
+      <ul class="modal-list">
+        <li>Izrada platnih lista i isplatnih naloga</li>
+        <li>Obračun doprinosa iz i na plaću</li>
+        <li>Prijava i odjava radnika na HZMO i HZZO</li>
+        <li>Vođenje kadrovske evidencije</li>
+        <li>Izrada potvrda o plaći i ostvarenim primicima</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-porezna-izvjesca" role="dialog" aria-modal="true" aria-labelledby="modal-izvjesca-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-izvjesca-title">Porezna izvješća</h2>
+      <p class="modal-lead">Izrada i predaja svih zakonski propisanih poreznih prijava i izvještaja — u ispravnom obliku i u propisanim rokovima.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Pripremamo i predajemo sve propisane porezne prijave i izvještaje — PDV obrasce, prijave poreza na dohodak i dobit, JOPPD obrasce, statistička izvješća i sve ostale dokumente koje zahtijevaju Porezna uprava i nadležna tijela državne uprave. Svaki obrazac prolazi kontrolu prije predaje.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Zakašnjela ili netočno popunjena porezna prijava povlači novčane kazne i dodatne troškove. Pravovremena i ispravna predaja svih obveznih izvješća temeljna je zakonska obveza svakog poslovnog subjekta, a njezino ispunjavanje zahtijeva detaljno poznavanje propisa i rokova.</p>
+      <ul class="modal-list">
+        <li>PDV prijave — mjesečne i tromjesečne</li>
+        <li>Prijava poreza na dobit (PD obrazac)</li>
+        <li>JOPPD obrasci</li>
+        <li>Statistička i ostala zakonska izvješća</li>
+        <li>Praćenje rokova predaje za svakog klijenta</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-zavrsni-racun" role="dialog" aria-modal="true" aria-labelledby="modal-zavrsni-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-zavrsni-title">Završni račun i podrška</h2>
+      <p class="modal-lead">Izrada godišnjeg financijskog izvještaja, predaja nadležnim tijelima i stručna podrška pri poreznim nadzorima i revizijama.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Izrađujemo godišnji financijski izvještaj koji obuhvaća bilancu, račun dobiti i gubitka te bilješke uz financijske izvještaje i predajemo ga FINA-i i Poreznoj upravi u zakonski propisanim rokovima. Pružamo i stručnu potporu klijentima za vrijeme poreznih nadzora i revizija, uključujući pripremu dokumentacije i komunikaciju s nadležnim tijelima.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Godišnji financijski izvještaj zakonska je obveza svakog trgovačkog društva i obrtnika obveznika poreza na dobit. Njegova točnost i pravovremena predaja uvjet su za uredno poslovanje, a ujedno služi kao osnova za poslovne pregovore, kreditne zahtjeve i strateško planiranje.</p>
+      <ul class="modal-list">
+        <li>Izrada godišnjeg financijskog izvještaja</li>
+        <li>Bilanca i račun dobiti i gubitka</li>
+        <li>Predaja FINA-i i Poreznoj upravi</li>
+        <li>Podrška pri poreznim nadzorima</li>
+        <li>Podrška pri revizijama i eksternim pregledima</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-otvaranje-drustva" role="dialog" aria-modal="true" aria-labelledby="modal-otvaranje-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-otvaranje-title">Otvaranje trgovačkog društva</h2>
+      <p class="modal-lead">Potpuna usluga osnivanja trgovačkog društva — od odabira naziva i pravne forme do upisa u registar i otvaranja poslovnog računa.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Koordiniramo cijeli proces osnivanja trgovačkog društva: savjetujemo o odabiru pravne forme, pomažemo pri odabiru naziva, djelatnosti i sjedišta, organiziramo usluge javnog bilježnika, pratimo uplatu temeljnog kapitala, upisujemo društvo u sudski registar i Državni zavod za statistiku, izrađujemo pečat i prijavljujemo društvo na Poreznu upravu. Po potrebi nudimo i adresu za sjedište.</p>
+      <h3>Zašto je to važno</h3>
+      <p>Osnivanje trgovačkog društva zahtijeva poznavanje pravnih, poreznih i administrativnih zahtjeva koji se moraju ispuniti u točno određenom redoslijedu. Pogreška u bilo kojoj fazi može uzrokovati kašnjenja i dodatne troškove. Stručnom koordinacijom osiguravamo brz, ispravan i zakonit postupak registracije.</p>
+      <ul class="modal-list">
+        <li>Savjetovanje o pravnoj formi i strukturi društva</li>
+        <li>Odabir naziva, djelatnosti i sjedišta</li>
+        <li>Koordinacija s javnim bilježnikom</li>
+        <li>Uplata temeljnog kapitala i otvaranje poslovnog računa</li>
+        <li>Upis u sudski registar i Državni zavod za statistiku</li>
+        <li>Izrada pečata i prijava na Poreznu upravu</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-turizam" role="dialog" aria-modal="true" aria-labelledby="modal-turizam-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-turizam-title">Turizam & nautika</h2>
+      <p class="modal-lead">Turistička i nautička djelatnost uz jadransku obalu — iznajmljivanje opreme i organizacija aktivnosti za domaće i strane goste.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Inservio d.o.o. uz računovodstvenu djelatnost aktivno je prisutan i u turističkom sektoru. Pružamo turističke i nautičke usluge te organiziramo rekreacijske aktivnosti prilagođene potrebama domaćih i stranih gostiju koji posjećuju dalmatinsku obalu.</p>
+      <ul class="modal-list">
+        <li>Turističke usluge i organizacija aktivnosti</li>
+        <li>Nautičke usluge i iznajmljivanje opreme</li>
+        <li>Rekreacijske i sportske aktivnosti na moru</li>
+        <li>Savjetovanje za turističke poduzetnike</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="modal-rent-a-car" role="dialog" aria-modal="true" aria-labelledby="modal-rentacar-title">
+    <div class="modal-content">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2 id="modal-rentacar-title">Rent-a-car</h2>
+      <p class="modal-lead">Kratkoročni i dugoročni najam osobnih vozila za privatne i poslovne korisnike uz prilagodljive uvjete najma.</p>
+      <div class="modal-divider"></div>
+      <h3>Opis usluge</h3>
+      <p>Nudimo usluge iznajmljivanja osobnih vozila namijenjene privatnim i poslovnim korisnicima. Uvjeti najma prilagodljivi su potrebama klijenta, a dostupnost i fleksibilnost trajanja najma osiguravaju praktično rješenje za sve vrste prijevoznih potreba.</p>
+      <ul class="modal-list">
+        <li>Kratkoročni i dugoročni najam osobnih vozila</li>
+        <li>Prilagodljivi uvjeti za poslovne korisnike</li>
+        <li>Iznajmljivanje prateće opreme</li>
+        <li>Transparentni uvjeti i cijene bez skrivenih naknada</li>
+      </ul>
+      <div class="modal-actions">
+        <a href="#kontakt" class="btn btn-primary modal-contact-btn">Kontaktirajte nas</a>
+        <button class="btn btn-outline modal-close-btn">Zatvori</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="cookie-banner" id="cookieBanner">
+    <div class="cookie-inner">
+      <div class="cookie-text">
+        <strong>Ova stranica koristi kolačiće.</strong>
+        Koristimo isključivo neophodne kolačiće za ispravno funkcioniranje stranice. Ne prikupljamo osobne podatke bez vašeg pristanka.
+        <a href="#" data-legal="privatnost">Politika privatnosti</a>
+      </div>
+      <div class="cookie-actions">
+        <button class="cookie-btn cookie-accept" id="cookieAccept">Prihvaćam</button>
+        <button class="cookie-btn cookie-decline" id="cookieDecline">Odbijam</button>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="modal modal-legal" id="modal-legal-impressum" role="dialog" aria-modal="true">
+    <div class="modal-content modal-content-legal">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2>Impressum</h2>
+      <div class="modal-divider"></div>
+      <h3>Podaci o tvrtki</h3>
+      <p><strong>Naziv:</strong> Inservio d.o.o.</p>
+      <p><strong>Sjedište:</strong> Ul. Hrvatske mornarice 1K, 21000 Split, Hrvatska</p>
+      <p><strong>Djelatnost:</strong> Računovodstvene, knjigovodstvene i revizijske djelatnosti; porezno savjetovanje</p>
+      <p><strong>Nadležni sud:</strong> Trgovački sud u Splitu</p>
+      <div class="modal-divider"></div>
+      <h3>Kontakt</h3>
+      <p><strong>Telefon:</strong> <a href="tel:+38521484662">+385 21 484 662</a></p>
+      <p><strong>Radno vrijeme:</strong> Ponedjeljak – Petak, 08:00 – 16:00</p>
+      <div class="modal-divider"></div>
+      <h3>Odgovornost za sadržaj</h3>
+      <p>Sadržaj ove web stranice pripremljen je s najvećom pažnjom i redovito se ažurira. Unatoč tome, ne možemo jamčiti potpunu točnost, ažurnost i potpunost svih informacija. Inservio d.o.o. ne preuzima odgovornost za eventualne pogreške ili propuste u sadržaju stranice.</p>
+      <p>Informacije objavljene na ovoj stranici imaju isključivo informativni karakter i ne predstavljaju pravni, porezni ni računovodstveni savjet. Za konkretne savjete vezane uz vaše poslovanje molimo da nas kontaktirate izravno.</p>
+      <div class="modal-divider"></div>
+      <h3>Autorska prava</h3>
+      <p>Cjelokupan sadržaj ove web stranice — tekst, grafički elementi, logotip i dizajn — vlasništvo je Inservio d.o.o. i zaštićen je autorskim pravima. Svako neovlašteno reproduciranje, distribucija ili preuzimanje sadržaja bez pisanog odobrenja nije dozvoljeno.</p>
+      <div class="modal-divider"></div>
+      <h3>Vanjske poveznice</h3>
+      <p>Ova stranica može sadržavati poveznice na vanjske web stranice. Inservio d.o.o. ne snosi odgovornost za sadržaj, dostupnost ni politiku privatnosti vanjskih stranica na koje vode takve poveznice.</p>
+    </div>
+  </div>
+
+  <div class="modal modal-legal" id="modal-legal-privatnost" role="dialog" aria-modal="true">
+    <div class="modal-content modal-content-legal">
+      <button class="modal-close" aria-label="Zatvori">&times;</button>
+      <h2>Politika privatnosti</h2>
+      <p class="modal-lead">Zadnje ažuriranje: lipanj 2026.</p>
+      <div class="modal-divider"></div>
+      <p>Inservio d.o.o. posvećen je zaštiti osobnih podataka svojih korisnika u skladu s Općom uredbom o zaštiti podataka (GDPR, Uredba EU 2016/679) i Zakonom o provedbi Opće uredbe o zaštiti podataka Republike Hrvatske. Ova politika opisuje koje osobne podatke prikupljamo, u koje svrhe ih koristimo i koja su vaša prava kao ispitanika.</p>
+      <div class="modal-divider"></div>
+      <h3>1. Voditelj obrade podataka</h3>
+      <p>Inservio d.o.o., Ul. Hrvatske mornarice 1K, 21000 Split, Hrvatska<br>
+      <p>Telefon: <a href="tel:+38521484662">+385 21 484 662</a></p>
+      <div class="modal-divider"></div>
+      <h3>2. Koje podatke prikupljamo</h3>
+      <p>Putem kontakt forme prikupljamo isključivo podatke koje nam Vi sami dostavljate: ime i prezime, e-mail adresu i sadržaj vaše poruke. Dostavljanje podataka je dobrovoljno.</p>
+      <div class="modal-divider"></div>
+      <h3>3. Svrha i pravna osnova obrade</h3>
+      <p>Osobne podatke koristimo isključivo u svrhu odgovora na vaš upit i uspostave moguće poslovne suradnje. Pravna osnova obrade je legitimni interes voditelja obrade (čl. 6. st. 1. t. f) GDPR-a) te, po potrebi, izvršenje ugovora ili provedba predugovornih mjera (čl. 6. st. 1. t. b) GDPR-a).</p>
+      <div class="modal-divider"></div>
+      <h3>4. Čuvanje i zaštita podataka</h3>
+      <p>Vaši podaci čuvaju se samo onoliko dugo koliko je nužno za ostvarenje svrhe radi koje su prikupljeni ili koliko propisuju zakonske obveze. Primjenjujemo odgovarajuće tehničke i organizacijske mjere zaštite. Podaci se ne prosljeđuju trećim stranama izvan Europske unije.</p>
+      <div class="modal-divider"></div>
+      <h3>5. Kolačići</h3>
+      <p>Ova stranica koristi isključivo neophodne kolačiće koji su nužni za ispravno funkcioniranje stranice. Ne koristimo analitičke, reklamne ni kolačiće trećih strana bez vašeg izričitog pristanka. Vaš odabir u vezi s kolačićima pohranjuje se lokalno u pregledniku i ne sadrži osobne podatke.</p>
+      <div class="modal-divider"></div>
+      <h3>6. Vaša prava</h3>
+      <p>Kao ispitanik imate pravo na pristup podacima, ispravak, brisanje, ograničenje obrade i prigovor. Imate i pravo podnijeti pritužbu nadzornom tijelu — u Republici Hrvatskoj to je Agencija za zaštitu osobnih podataka (AZOP) <a href="https://azop.hr" target="_blank" rel="noopener">azop.hr</a>.</p>
+      <div class="modal-divider"></div>
+      <h3>7. Izmjene politike privatnosti</h3>
+      <p>Inservio d.o.o. zadržava pravo izmjene ove politike. Svaka izmjena bit će objavljena na ovoj stranici uz navođenje datuma zadnjeg ažuriranja.</p>
+    </div>
+  </div>
 
   <script src="js.js"></script>
-
 </body>
 </html>
