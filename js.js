@@ -7,7 +7,8 @@ burger.addEventListener("click", () => {
 });
 
 navLinks.querySelectorAll("a").forEach(link => {
-  link.addEventListener("click", () => {
+  link.addEventListener("click", (e) => {
+    if (link.classList.contains("nav-dropdown-toggle")) return;
     navLinks.classList.remove("active");
   });
 });
@@ -190,7 +191,10 @@ document.addEventListener("DOMContentLoaded", () => {
 // NAV DROPDOWN
 document.addEventListener("DOMContentLoaded", () => {
   const dropdown = document.querySelector(".nav-dropdown");
+  if (!dropdown) return;
+
   const toggle = dropdown.querySelector(".nav-dropdown-toggle");
+  const navLinks = document.getElementById("navLinks");
 
   toggle.addEventListener("click", (e) => {
     const isMobile = window.innerWidth <= 768;
@@ -206,25 +210,18 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  document.querySelectorAll("[data-open-modal]").forEach(link => {
+  dropdown.querySelectorAll("[data-open-modal]").forEach(link => {
     link.addEventListener("click", (e) => {
       e.preventDefault();
-      const modalId = link.getAttribute("data-open-modal");
-      const target = link.getAttribute("href");
-
       dropdown.classList.remove("open");
       navLinks.classList.remove("active");
 
-      document.querySelector(target).scrollIntoView({ behavior: "smooth" });
-
-      setTimeout(() => {
-        const modal = document.getElementById(`modal-${modalId}`);
-        if (!modal) return;
+      const modalId = link.getAttribute("data-open-modal");
+      const modal = document.getElementById(`modal-${modalId}`);
+      if (modal) {
         modal.classList.add("active");
         document.body.style.overflow = "hidden";
-        const content = modal.querySelector(".modal-content");
-        if (content) content.focus();
-      }, 500);
+      }
     });
   });
 });
