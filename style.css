@@ -370,15 +370,6 @@ footer{
 }
 }
 
-.gallery-stage {
-  position: relative;
-  width: 100%;
-  padding-top: 43.75%;
-  border-radius: 16px;
-  overflow: hidden;
-  background: #f0f0f0;
-}
-
 .logo {
   display: block;
   max-width: 160px;
