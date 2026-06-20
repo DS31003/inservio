@@ -364,6 +364,19 @@ footer{
   .cards {
     grid-template-columns: 1fr;
   }
+
+  .gallery-stage {
+  height: 200px !important;
+}
+}
+
+.gallery-stage {
+  position: relative;
+  width: 100%;
+  padding-top: 43.75%;
+  border-radius: 16px;
+  overflow: hidden;
+  background: #f0f0f0;
 }
 
 .logo {
