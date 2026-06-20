@@ -62,7 +62,7 @@ form.addEventListener("submit", (e) => {
   successMsg.style.display = "block";
   setTimeout(() => {
     successMsg.style.display = "none";
-  }, 5000);
+  }, 12000);
 });
 
 // SCROLL TO TOP
@@ -258,4 +258,73 @@ document.addEventListener("DOMContentLoaded", () => {
       modal.querySelector(".modal-content").scrollTop = 0;
     });
   });
+});
+
+
+
+// GALLERY
+document.addEventListener("DOMContentLoaded", () => {
+  const slides = document.querySelectorAll(".gallery-slide");
+  const thumbs = document.querySelectorAll(".gallery-thumb");
+  const dots = document.querySelectorAll(".gallery-dot");
+  const veil = document.getElementById("galleryLogoVeil");
+  const prevBtn = document.getElementById("galleryPrev");
+  const nextBtn = document.getElementById("galleryNext");
+
+  if (!slides.length) return;
+
+  let current = 0;
+  let isTransitioning = false;
+  let autoTimer = null;
+
+  const goTo = (index) => {
+    if (isTransitioning || index === current) return;
+    isTransitioning = true;
+
+    slides[current].classList.remove("active");
+    if (thumbs[current]) thumbs[current].classList.remove("active");
+    dots[current].classList.remove("active");
+
+    veil.classList.add("visible");
+
+    setTimeout(() => {
+      current = (index + slides.length) % slides.length;
+      slides[current].classList.add("active");
+      if (thumbs[current]) thumbs[current].classList.add("active");
+      dots[current].classList.add("active");
+
+      setTimeout(() => {
+        veil.classList.remove("visible");
+        isTransitioning = false;
+      }, 800);
+    }, 800);
+  };
+
+  const startAuto = () => {
+    autoTimer = setInterval(() => goTo(current + 1), 15000);
+  };
+
+  const resetAuto = () => {
+    clearInterval(autoTimer);
+    startAuto();
+  };
+
+  prevBtn.addEventListener("click", () => { goTo(current - 1); resetAuto(); });
+  nextBtn.addEventListener("click", () => { goTo(current + 1); resetAuto(); });
+
+  thumbs.forEach((thumb) => {
+    thumb.addEventListener("click", () => {
+      goTo(parseInt(thumb.getAttribute("data-thumb")));
+      resetAuto();
+    });
+  });
+
+  dots.forEach((dot) => {
+    dot.addEventListener("click", () => {
+      goTo(parseInt(dot.getAttribute("data-dot")));
+      resetAuto();
+    });
+  });
+
+  startAuto();
 });
